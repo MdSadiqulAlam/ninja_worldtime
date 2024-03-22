@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ninja_worldtime/pages/choose_location.dart';
 import 'package:ninja_worldtime/pages/home.dart';
+import 'package:ninja_worldtime/pages/loading.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "beginners world time ",
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: Home(),
+      initialRoute: "/",
+      routes: {
+        "/": (context)=>Loading(),
+        "/home":(context)=>Home(),
+        "/location":(context)=> ChooseLocation(),
+      },
     );
   }
 }
