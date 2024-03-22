@@ -19,7 +19,7 @@ class WorldTime {
       Response response =
           await get(Uri.parse("https://worldtimeapi.org/api/timezone/$url"));
       Map timeData = jsonDecode(response.body);
-      print(timeData);
+      // print(timeData);
 
       // get property from data
       String datetime = timeData["datetime"];
@@ -29,9 +29,9 @@ class WorldTime {
 
       // create DateTime time
       DateTime timeNow = DateTime.parse(datetime);
-      print(timeNow);
+      // print(timeNow);
       timeNow = timeNow.add(Duration(hours: int.parse(offset)));
-      print(timeNow);
+      // print(timeNow);
 
       //set the time property
       isDayTIme= (timeNow.hour> 6 && timeNow.hour<20) ? true:false;
@@ -39,7 +39,7 @@ class WorldTime {
       time = DateFormat.jm().format(timeNow);
     } catch (e) {
       print("caught error SADIQ: $e");
-      time = "could not get time data";
+      // time = "could not get time data";
     }
   }
 }

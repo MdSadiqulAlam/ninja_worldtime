@@ -12,8 +12,10 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    // Navigator.popUntil(context, ModalRoute.withName('/home'));
+
     data = ModalRoute.of(context)?.settings.arguments as Map<dynamic, dynamic>?;
-    print("print from home.dart: $data");
+    // print("print from home.dart: $data");
 
     // set background image
     String bgImage = data?["isDayTime"] == true ? "day.png" : "night.png";

@@ -38,9 +38,9 @@ class _ChooseLocationState extends State<ChooseLocation> {
     //   'flag': selectedLocation.flag,
     // };
 
-    Data.url=selectedLocation.url;
-    Data.location=selectedLocation.location;
-    Data.flag=selectedLocation.flag;
+    Data.url = selectedLocation.url;
+    Data.location = selectedLocation.location;
+    Data.flag = selectedLocation.flag;
 
     // Convert the data object to JSON format
     // String jsonString = json.encode(newData);
@@ -52,8 +52,10 @@ class _ChooseLocationState extends State<ChooseLocation> {
     //   // Write the JSON string to the file
     //   await file.writeAsString(jsonString);
 
-      // Navigate back to the home screen after successful write
-      Navigator.pushReplacementNamed(context, "/");
+    // Navigate back to the home screen after successful write
+    // Navigator.popUntil(context, (route) => false);
+    // Navigator.popAndPushNamed(context, "/");
+    Navigator.pushReplacementNamed(context, "/");
     // } catch (e) {
     //   print('Failed to update data: $e');
     // }

@@ -1,6 +1,6 @@
 class Data {
-  static String url="Asia/Jakarta";
-  static String location="Jakarta";
-  static String flag="indonesia.png";
+  static String url="Asia/Dhaka";
+  static String location="Dhaka";
+  static String flag="bangladesh.png";
 }
 
